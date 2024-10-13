@@ -85,4 +85,5 @@ UPGRADE/
 ![image](https://github.com/user-attachments/assets/36f4e78d-b11f-4f81-b163-8e496973c6f2)
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
+
