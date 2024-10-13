@@ -84,6 +84,9 @@ UPGRADE/
 ![image](https://github.com/user-attachments/assets/7c57430d-230f-460c-9a05-43c818dc3f25)
 ![image](https://github.com/user-attachments/assets/36f4e78d-b11f-4f81-b163-8e496973c6f2)
 
+## Check out the .ipynb file to learn how the project works.
+https://nbviewer.org/github/Nehal-Khan-29/Upgrade/blob/main/Justification%20Code%20New.ipynb
+
 ## License
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
 
