@@ -360,6 +360,7 @@ def student_analysis():
 
                             accuracy = accuracy_score(Y_test, Y_pred.toarray())
                             print("Accuracy: {:.2f}%".format(accuracy * 100))
+                            flash("Accuracy: {:.2f}%".format(accuracy * 100), 'info')
                             
                             joblib.dump(mlknn, model_file_path)
                             flash(f"Model saved as {model_file_path}", 'success')
