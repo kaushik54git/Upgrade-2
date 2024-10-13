@@ -155,7 +155,7 @@ def student_analysis():
         mongo_client = MongoClient('mongodb+srv://Upgrade:19Cse357@upgrade.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000')  # Adjust the URI as needed
         db = mongo_client['Upgrade'] 
         
-        UPLOAD_FOLDER = './/'
+        UPLOAD_FOLDER = './/Sheets//'
 
         # Ensure the directory exists
         if not os.path.exists(UPLOAD_FOLDER):
@@ -480,8 +480,6 @@ def student_analysis():
                     mlb_file_path = f"{course_id}_dataset_mlb.joblib"
                     os.remove(model_file_path)
                     os.remove(mlb_file_path)
-                    os.remove(course_excell_path)
-                    os.remove(Students_excell_path)
                 else: 
                     flash(f"No such Students Marks of the course {course_id} in the given excell sheet", 'error')
 
