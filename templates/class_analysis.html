@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/class_analysis.css">
+    <title>Class Analysis</title>
+    <script>
+        function clearFlashContent(closeButton) {
+            var flashBox = closeButton.parentElement;
+            flashBox.querySelector('.flash-content').innerHTML = ''; // Clear the content inside the flash box
+        }
+    </script>
+    <style>
+        .flash {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            position: relative;
+            min-height:50px;
+            list-style-type: none;
+        }
+        
+        .flash.info {
+            color: blue;
+            background-color: #D9EDF7;
+        }
+        
+        .flash.success {
+            color: green;
+            background-color: #DFF2BF;
+        }
+        
+        .flash.error {
+            color: red;
+            background-color: #F2DEDE;
+        }
+        
+        .flash.warning {
+            color: orange;
+            background-color: #FCF8E3;
+        }
+        
+        /* Close button styling */
+        .flash .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .flash .close:hover {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Class Analysis</h1>
+    </div>
+
+    
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <div class="main">
+            <label for="classname">Class:</label>
+            {{form.classname}}
+            
+            <label for="course_id">Course Id:</label>
+            {{form.course_id}}
+
+            {% if error %}
+            <div class="error">{{error}}</div>
+            {% endif %}
+
+            {{form.submit}}
+            <a href="{{url_for('teacher_dashboard')}}" class="btn" id="b1">Go Back</a>
+        </div>
+    </form>
+    <!-- Flash Messages Display Block -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">
+                    <span class="close" onclick="clearFlashContent(this);">&times;</span>
+                    <span class="flash-content">{{ message|safe }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+</body>
+</html>

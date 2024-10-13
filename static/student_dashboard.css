@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family:"Poppins",sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: url("student_dashboard.png")no-repeat;
+    background-size: cover;
+}
+    
+
+.main{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box{
+    text-align: center;
+    color:#7ed957;
+    font-size: larger;
+}
+p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 24px;
+    
+}
+.button-container {
+    top:50%;
+    display: flex;           /* Aligns buttons horizontally */
+    justify-content: center; /* Centers the buttons */
+    gap: 20px;               /* Adds spacing between buttons */
+}
+
+/* Button styling remains the same */
+.btn {
+    background-color:rgb(76, 177, 76);
+    color: white;
+    height: 100px;
+    width: 300px;
+    border: none;
+
+    text-align: center;
+    font-size: 24px;
+    align-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+    margin: 20px;
+
+}
+.btn{
+    font-size: 24px;
+}
+.btn:hover {
+    background-color: rgb(45, 161, 41);
+    transform: scale(1.2);
+}

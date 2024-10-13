@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/teacher_dashboard.css">
+    <title>Teacher Dashborad</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Dashboard</h1>
+    </div>
+    <br>
+    <p>Hi {{teacher_name}}👋, welcome to your dashboard</p>
+    <form method="POST" action="">
+        <br><br><br><br>
+        <div class="button-container">
+            <a href="{{url_for('find_student_recommendation')}}" class="btn">Find Student Recommendation</a>
+            <a href="{{url_for('student_analysis')}}" class="btn">Student Analysis</a>
+            <a href="{{url_for('class_analysis')}}" class="btn">Class Analysis</a>
+        </div>
+    </form>
+</body>
+</html>
