@@ -155,7 +155,7 @@ def student_analysis():
         mongo_client = MongoClient('mongodb+srv://Upgrade:19Cse357@upgrade.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000')  # Adjust the URI as needed
         db = mongo_client['Upgrade'] 
         
-        UPLOAD_FOLDER = './/Sheets//'
+        UPLOAD_FOLDER = './/Sheets'
 
         # Ensure the directory exists
         if not os.path.exists(UPLOAD_FOLDER):
