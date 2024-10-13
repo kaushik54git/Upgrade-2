@@ -88,8 +88,8 @@
         <ul class="flashes">
             {% for category, message in messages %}
                 <li class="flash {{ category }}">
-                    <span class="close" onclick="clearFlashContent(this);">&times;</span>
-                    <span class="flash-content">{{ message|safe }}</span>
+                    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+                    {{ message|safe }}
                 </li>
             {% endfor %}
         </ul>
