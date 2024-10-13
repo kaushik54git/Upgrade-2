@@ -1,6 +1,6 @@
-# Upgrade-2
+# Upgrade
 ## Overview
-This project is a Recommender System aimed at improving students' learning experiences by using the ML-KNN (Multi-Label K-Nearest Neighbor) algorithm. It provides personalized recommendations to students based on their learning patterns and performance. The system is built with a Flask front-end and MongoDB as the database for managing student and course data.
+This project is a Recommender System aimed at improving students' learning experiences by using the ML-KNN (Multi-Label K-Nearest Neighbor) algorithm. It provides personalized recommendations to students based on their learning patterns and performance 📊. The system is built with a Flask front-end and MongoDB as the database for managing student and course data.
 ## Features
 - **User-friendly Dashboard:** Separate dashboards for teachers and students.
 - **Course and Student File Upload:** Teachers can upload student and course data to generate tailored recommendations.
@@ -75,5 +75,14 @@ UPGRADE/
 ├── Students_19cse301.xlsx
 └── app.py
 ```
+## Screenshots
+![image](https://github.com/user-attachments/assets/834cb77d-bf06-4a78-b022-079165ec6f08)
+![image](https://github.com/user-attachments/assets/7c8fb6ad-672c-47ce-9572-527a7353c36d)
+![image](https://github.com/user-attachments/assets/b2960843-e7bf-4bfe-b11b-873caad9528e)
+![image](https://github.com/user-attachments/assets/f2e62760-afb1-4f27-9d9f-8693a3472109)
+![image](https://github.com/user-attachments/assets/13e32b0b-0068-47e4-85ce-2c9915cda563)
+![image](https://github.com/user-attachments/assets/7c57430d-230f-460c-9a05-43c818dc3f25)
+![image](https://github.com/user-attachments/assets/36f4e78d-b11f-4f81-b163-8e496973c6f2)
+
 ## License
 
