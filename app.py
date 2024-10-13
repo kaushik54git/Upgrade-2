@@ -173,7 +173,7 @@ def student_analysis():
 
         course_file.save(course_excell_path)
         student_file.save(Students_excell_path)
-        print("1")
+    
         
         
         # Send course data ===================================================================================================================
@@ -184,7 +184,7 @@ def student_analysis():
         if collection_name in db.list_collection_names():
             flash(f"The course collection '{collection_name}' already exists.", 'info')
             file_truth = 1
-            print("2")
+            
         else:        
             xls = pd.ExcelFile(course_excell_path)
             
@@ -195,7 +195,7 @@ def student_analysis():
                 result = collection_course.insert_many(data_dict)
                 flash(f'Documents inserted: {len(result.inserted_ids)}', 'success')
                 file_truth = 1
-                print("3")
+                
             else: 
                 flash(f"No such Course details {course_id} in the given excell sheet",'error')
         
