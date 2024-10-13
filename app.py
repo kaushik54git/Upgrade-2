@@ -155,7 +155,7 @@ def student_analysis():
         mongo_client = MongoClient('mongodb+srv://Upgrade:19Cse357@upgrade.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000')  # Adjust the URI as needed
         db = mongo_client['Upgrade'] 
         
-        UPLOAD_FOLDER = 'D://python//flask//Upgrade'
+        UPLOAD_FOLDER = './/'
 
         # Ensure the directory exists
         if not os.path.exists(UPLOAD_FOLDER):
@@ -173,7 +173,7 @@ def student_analysis():
 
         course_file.save(course_excell_path)
         student_file.save(Students_excell_path)
-    
+        
         
         
         # Send course data ===================================================================================================================
@@ -435,7 +435,7 @@ def student_analysis():
                         df_courses = pd.DataFrame(list(db[f'Course_{course_id}'].find()))
                         Assessments = list(df_courses['Assessments'])
 
-                        class_avg = df_students.groupby('Class')[Assessments].mean().reset_index()
+                        class_avg = df_students.groupby('Class')[Assessments].mean().reset_index().round(2)
 
                         model_file_path = f"{course_id}_dataset_model.joblib"
                         mlb_file_path = f"{course_id}_dataset_mlb.joblib"
@@ -505,7 +505,7 @@ def class_analysis():
             for index, row in df_class.iterrows():
                 for col in df_class.columns:
                     if col != '_id':
-                        mark_list += f"{col}: {row[col]}<br>"
+                        mark_list += f"{col} : {row[col]}<br>"
                 flash(f"{mark_list}",'success')
     return render_template('class_analysis.html',form=form)
 
