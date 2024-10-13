@@ -476,6 +476,12 @@ def student_analysis():
                     training_data(course_id)
                     student_recommendation(course_id)
                     class_analysis_recommendation(course_id)
+                    model_file_path = f"{course_id}_dataset_model.joblib"
+                    mlb_file_path = f"{course_id}_dataset_mlb.joblib"
+                    os.remove(model_file_path)
+                    os.remove(mlb_file_path)
+                    os.remove(course_excell_path)
+                    os.remove(Students_excell_path)
                 else: 
                     flash(f"No such Students Marks of the course {course_id} in the given excell sheet", 'error')
 
