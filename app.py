@@ -204,7 +204,7 @@ def student_analysis():
         if file_truth == 1:
             collection_name = f'Students_{course_id}'
             if collection_name in db.list_collection_names():
-                flash(f"The students collection '{collection_name}' already exists.", 'success')
+                flash(f"The students collection '{collection_name}' already exists.", 'info')
             else:
                 xls = pd.ExcelFile(Students_excell_path)
                 
